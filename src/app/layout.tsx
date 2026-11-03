@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Outfit } from "next/font/google";
-import { AppShell } from "@/components/shell/app-shell";
+import { ShellSwitch } from "@/components/shell/shell-switch";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -26,7 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${outfit.variable} ${fraunces.variable} h-full antialiased`}>
       <body className="min-h-full font-sans text-ink">
-        <AppShell>{children}</AppShell>
+        <ShellSwitch>{children}</ShellSwitch>
       </body>
     </html>
   );
